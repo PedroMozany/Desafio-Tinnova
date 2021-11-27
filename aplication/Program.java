@@ -4,29 +4,20 @@ import java.util.Scanner;
 
 public class Program {
 
-	@SuppressWarnings("unused")
 	public static void main(String[] args) {
-
 		Scanner sc = new Scanner(System.in);
-		Calculo calculo = new Calculo();
+		BubleSort bolha = new BubleSort();
+		int[] dados = new int[] { 5, 3, 2, 4, 7, 1, 0, 6 };
 
-		System.out.print("Favor digitar total de eleitor: ");
-		int totalEleitor = sc.nextInt();
+		System.out.print("Deseja ver passo a passo S/N: ");
 
-		System.out.print("favor ditar os votos validos: ");
-		int validos = sc.nextInt();
+		char resp = sc.next().charAt(0);
 
-		double percentual = calculo.votosValidos(totalEleitor, validos);
-
-		System.out.print("Favor digitar os votos em branco: ");
-		int brancos = sc.nextInt();
-
-		percentual = calculo.branco(totalEleitor, brancos);
-
-		System.out.print("Favor digitar os votos em branco: ");
-		int nulos = sc.nextInt();
-
-		percentual = calculo.nulo(totalEleitor, nulos);
+		if ((resp == 'S') || (resp == 's')) {
+			System.out.println("Resultado: " + bolha.bolha(dados, true));
+		} else if ((resp == 'N') || (resp == 'n')) {
+			System.out.println("Resultado: " + bolha.bolha(dados, false));
+		}
 
 		sc.close();
 	}
