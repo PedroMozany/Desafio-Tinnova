@@ -24,10 +24,10 @@ public class BubleSort {
 	}
 
 	/**
-	 * VAI IMPRIMIR UMA SEQUENCIA DESTACANDO DOIS ELEMENTOS QUE VAO MUDAR DE POSI«√O
+	 * VAI IMPRIMIR UMA SEQUENCIA DESTACANDO DOIS ELEMENTOS QUE VAO MUDAR DE POSI√á√ÉO
 	 * 
 	 * @param vet O VETOR
-	 * @param posDestaque POSI«√O A DESTACAR. ENVIA -1 CASO NAO HAJA POSI«√O DESTACAR
+	 * @param posDestaque POSI√á√ÉO A DESTACAR. ENVIA -1 CASO NAO HAJA POSI√á√ÉO DESTACAR
 	 * @return STRING COM DESTAQUE
 	 */
 	public String imprimir(int[] vet, int posDestaque) {
@@ -35,7 +35,7 @@ public class BubleSort {
 		for (int i = 0; i < vet.length; i++) {
 			String dado = String.format("%4d", vet[i]) + " ";
 			if (i == posDestaque) {
-				dado = "-->" + dado + "-->";
+				dado = "[" + dado + "]";
 			}
 			sb.append(dado);
 		}
